@@ -25,15 +25,15 @@ public class AppleSpawner : MonoBehaviour
 
     private void FillPointsForSpawningList()
     {
-        Vector2 upperLeftCornerLocalPosition = new Vector2(-(_spawnZone.localScale.x / 2), (_spawnZone.localScale.y / 2));
-        Vector2 upperRightCornerLocalPosition = new Vector2((_spawnZone.localScale.x / 2), (_spawnZone.localScale.y / 2));
-        Vector2 lowerLeftCornerLocalPosition = new Vector2(-(_spawnZone.localScale.x / 2), (-_spawnZone.localScale.y / 2));
+        Vector2 upperLeftCornerLocalPosition = new Vector2(-(_spawnZone.localScale.x / 2) + 1, (_spawnZone.localScale.y / 2) - 1);
+        Vector2 upperRightCornerLocalPosition = new Vector2((_spawnZone.localScale.x / 2), (_spawnZone.localScale.y / 2) - 1);
+        Vector2 lowerLeftCornerLocalPosition = new Vector2(-(_spawnZone.localScale.x / 2) + 1, (-_spawnZone.localScale.y / 2));
         Vector2 lowerRightCornerLocalPosition = new Vector2((_spawnZone.localScale.x / 2), (-_spawnZone.localScale.y / 2));
 
         for (int i = (int)upperLeftCornerLocalPosition.x; i < (int)upperRightCornerLocalPosition.x; i++)
         {
-            for (int j = (int)upperLeftCornerLocalPosition.y; j < (int)lowerLeftCornerLocalPosition.y; j++)
-                _allPointsForSpawningInZone.Add(new Vector3(i, j, transform.position.z) + _spawnZone.position);
+            for (int j = (int)upperLeftCornerLocalPosition.y; j > (int)lowerLeftCornerLocalPosition.y; j--)
+                _allPointsForSpawningInZone.Add(new Vector3(i, j, transform.position.z));
         }
     }
 

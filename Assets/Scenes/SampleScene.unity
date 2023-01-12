@@ -1285,7 +1285,6 @@ MonoBehaviour:
   _nextStepPause: 0.2
   _speed: 1
   _isMoving: 1
-  _head: {fileID: 0}
 --- !u!4 &1935472410
 Transform:
   m_ObjectHideFlags: 0
@@ -1343,7 +1342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5778721948603289542, guid: 5589547017440b94e9f5f17d5597d217, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5778721948603289542, guid: 5589547017440b94e9f5f17d5597d217, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1390,6 +1389,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1935472410}
     m_Modifications:
+    - target: {fileID: 2971822137844331237, guid: 7cf4b50304353b9449fc795b8dd7366a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4191152440152169398, guid: 7cf4b50304353b9449fc795b8dd7366a, type: 3}
+      propertyPath: _collision.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1935472409}
     - target: {fileID: 6172766610349276300, guid: 7cf4b50304353b9449fc795b8dd7366a, type: 3}
       propertyPath: m_Name
       value: Body Part

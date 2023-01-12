@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
         left
     }
 
-    private void Start()
+    private void Awake()
     {
         _head = GetComponentInChildren<SnakeHead>();
         _otherBodyParts = new List<SnakeBodyPart>();
